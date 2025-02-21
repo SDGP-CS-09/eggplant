@@ -13,7 +13,13 @@ app = FastAPI()
 
 MODEL = tf.keras.models.load_model("my_model.h5")
 
-CLASS_NAMES = ["Blight", "Common_Rust", "Gray_Leaf_Spot", "Healthy"]
+CLASS_NAMES = ["Augmented Healthy Leaf",
+ "Augmented Insect Pest Disease",
+ "Augmented Leaf Spot Disease",
+ "Augmented Mosaic Virus Disease",
+ "Augmented Small Leaf Disease",
+ "Augmented White Mold Disease",
+ "Augmented Wilt Disease"]
 
 @app.get("/ping")
 async def ping():
